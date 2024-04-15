@@ -13,26 +13,29 @@ function Navbar({ className }: { className?: string }) {
     >
       <Menu setActive={setActive}>
         <Link href={"#"}>
-          <MenuItem setActive={setActive} active={active} item="Home">
-            <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/web-dev">Web Development</HoveredLink>
-              <HoveredLink href="/interface-design">
-                Interface Design
-              </HoveredLink>
-              <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-              <HoveredLink href="/branding">Branding</HoveredLink>
-            </div>
-          </MenuItem>
-          <MenuItem setActive={setActive} active={active} item="Our Servises">
-            <div className="flex flex-col space-y-4 text-sm">
-              <HoveredLink href="/web-dev">Web Development</HoveredLink>
-              <HoveredLink href="/interface-design">
-                Interface Design
-              </HoveredLink>
-              <HoveredLink href="/seo">Search Engine Optimization</HoveredLink>
-              <HoveredLink href="/branding">Branding</HoveredLink>
-            </div>
-          </MenuItem>
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item="Home"
+          ></MenuItem>
+        </Link>
+        <MenuItem setActive={setActive} active={active} item="Our Courses">
+          <div className="flex flex-col space-y-4 text-sm">
+            <HoveredLink href="/web-dev">All Courses</HoveredLink>
+            <HoveredLink href="/interface-design">
+              Basic Music Theory
+            </HoveredLink>
+            <HoveredLink href="/seo">Advanced Composition</HoveredLink>
+            <HoveredLink href="/branding">Songwriting</HoveredLink>
+            <HoveredLink href="/branding">Music Production</HoveredLink>
+          </div>
+        </MenuItem>
+        <Link href={"/contact"}>
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item="Contact Us"
+          ></MenuItem>
         </Link>
       </Menu>
     </div>
